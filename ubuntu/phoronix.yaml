@@ -20,7 +20,6 @@ install:
         - php5-readline
         - libgd3
         - libxpm4
-        - phpapi-20121212+lfs
         - libfontconfig1
         - libfreetype6
         - libjpeg8
