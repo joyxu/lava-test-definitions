@@ -1,0 +1,33 @@
+metadata:
+    format: Lava-Test Test Definition 1.0
+    name: tcpreplay-client
+    description: "Basic tcpreplay test on client side"
+    maintainer:
+        - xuwei5@hisilicon.com
+    os:
+        - ubuntu
+    scope:
+        - performance
+    devices:
+        - d02
+        - hi1612-evb
+
+install:
+     deps:
+         - tcpreplay
+         - python-minimal
+
+params:
+    ETH: eth0
+    REP: 100
+    REMOTE_IP: 192.168.0.3
+
+run:
+    steps:
+        - ifconfig -a
+        - route
+        - lava-network broadcast $ETH
+        - lava-network collect $ETH
+        - lava-test-case --shell ./common/scripts/generator-single.sh $ETH $REMOTE_IP max $REP
+parse:
+        "pattern": "^test_case_id:(?P<test_case_id>.+) units:(?P<units>.+) measurement:(?P<measurement>\\d+\\.\\d+) result:(?P<result>\\w+)"
