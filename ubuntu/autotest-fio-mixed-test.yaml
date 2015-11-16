@@ -1,0 +1,24 @@
+metadata:
+    name: fio-mixed-ubuntu
+    format: "Lava-Test-Shell Test Definition 1.0"
+    description: "FIO or Flexible IO is a versatile IO workload generator Test on Linux Linaro ubuntu.
+                  The target Device ID required to run this test is set to '/dev/sda/' by default and
+                  it is possible to set Device ID through JSON file as well."
+    maintainer:
+        - xuwei5@hisilicon.com
+    os:
+        - ubuntu
+    devices:
+        - d01
+        - d02
+        - hi1612-evb
+    environment:
+        - lava-test-shell
+
+install:
+    deps:
+        - fio
+
+run:
+    steps:
+        - "fio ./common/scripts/autotest/fio-mixed.job"

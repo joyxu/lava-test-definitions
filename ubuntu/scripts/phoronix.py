@@ -105,7 +105,9 @@ eth_interface_list = filter(None, eth_interface_list)
 print eth_interface_list
 
 # Define test list
-test_list = ['system-decompress-xz', 'stream', 'compilebench', 'network-loopback', 'iozone', 'dbench']
+test_list = ['system-decompress-xz', 'stream', 'compilebench',
+'network-loopback', 'iozone', 'dbench', 'aio-stress', 'fs-mark', 'postmark',
+'fio' ]
 
 # Run all the test
 for i in range(0, len(test_list)):
