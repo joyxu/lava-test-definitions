@@ -20,7 +20,7 @@ local_ip=$(ifconfig $1|grep "inet addr"|grep -v "127.0.0.1"|cut -d: -f2|cut -d' 
 #done
 
 remote_ip=$2
-
+echo "remote ip is " $remote_ip
 if [ -z ${remote_ip} ]
 then
 	echo "Missing remote ip!"
