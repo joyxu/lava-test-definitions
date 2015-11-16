@@ -19,7 +19,7 @@ local_ip=$(ifconfig $1|grep "inet addr"|grep -v "127.0.0.1"|cut -d: -f2|cut -d' 
 #	fi
 #done
 
-remote_ip = $2
+remote_ip=$2
 
 if [ -z ${remote_ip} ]
 then
