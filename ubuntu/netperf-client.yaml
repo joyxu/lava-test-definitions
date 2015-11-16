@@ -28,7 +28,7 @@ run:
     steps:
         - ifconfig -a
         - route
-        - lava-test-case --shell ./common/scripts/netperf-client-single.sh $ETH $REMOTE_IP
+        - ./common/scripts/netperf-client-single.sh $ETH $REMOTE_IP
 
 parse:
         "pattern": "^test_case_id:(?P<test_case_id>.+) units:(?P<units>.+) measurement:(?P<measurement>\\d+\\.\\d+) result:(?P<result>\\w+)"
