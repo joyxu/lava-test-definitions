@@ -26,8 +26,6 @@ run:
     steps:
         - ifconfig -a
         - route
-        - lava-network broadcast $ETH
-        - lava-network collect $ETH
         - lava-test-case --shell ./common/scripts/generator-single.sh $ETH $REMOTE_IP max $REP
 parse:
         "pattern": "^test_case_id:(?P<test_case_id>.+) units:(?P<units>.+) measurement:(?P<measurement>\\d+\\.\\d+) result:(?P<result>\\w+)"

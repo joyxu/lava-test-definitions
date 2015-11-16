@@ -28,8 +28,6 @@ run:
     steps:
         - ifconfig -a
         - route
-        - lava-network broadcast $ETH
-        - lava-network collect $ETH
         - lava-test-case --shell ./common/scripts/netperf-client-single.sh $ETH $REMOTE_IP
 
 parse:
