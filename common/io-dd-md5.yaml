@@ -1,0 +1,21 @@
+metadata:
+    name: io-dd-md5
+    format: "Lava-Test-Shell Test Definition 1.0"
+    description: "io consistence testing with dd and md5"
+    maintainer:
+        - xuwei5@hisilicon.com
+    os:
+        - ubuntu
+    devices:
+        - d01
+        - d02
+        - hi1612-evb
+    environment:
+        - lava-test-shell
+
+run:
+    steps:
+        - ./common/scripts/io-dd-md5.sh
+
+parse:
+    pattern: '^(?P<test_case_id>[a-zA-Z]+):\s*(?P<measurement>[0-9.]+)\s+(?P<units>[\w\/]+)\s+(?P<result>pass)'
