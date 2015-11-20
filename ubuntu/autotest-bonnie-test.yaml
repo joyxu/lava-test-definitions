@@ -23,4 +23,6 @@ run:
     steps:
         - "cd ~/"
         - "make dir tmp-bonnie"
-        - "bonnie++ -d ~/tmp-bonnie -n 2048"
+        - "bonnie++ -d ~/tmp-bonnie -n 2048 | tee result.log"
+        - 'lava-test-case bonnie++ --result pass'
+        - 'lava-test-run-attach result.log'

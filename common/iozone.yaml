@@ -16,8 +16,8 @@ metadata:
         - performance
 
 install:
-    steps:
-        - 'if [ -f "/etc/apt/sources.list" ]; then sed -i "s/\(^deb .*\)/\1 multiverse/" /etc/apt/sources.list; apt-get update ; apt-get install iozone3; fi'
+    deps:
+        - iozone3
 
 params:
     OPTIONS: -az -i0 -i1 -s 20m -y 128k -q 4m -I -e

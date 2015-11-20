@@ -18,4 +18,7 @@ run:
         - ./common/scripts/io-dd-md5.sh
 
 parse:
-    pattern: '^(?P<test_case_id>[a-zA-Z]+):\s*(?P<measurement>[0-9.]+)\s+(?P<units>[\w\/]+)\s+(?P<result>pass)'
+    pattern: "(?P<test_case_id>[a-zA-Z0-9_-]+):\\s(?P<result>\\w+)"
+    fixupdict:
+        FAIL: fail
+        PASS: pass

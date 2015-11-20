@@ -21,4 +21,6 @@ install:
 
 run:
     steps:
-        - "fio ./common/scripts/autotest/fio-mixed.job"
+        - "fio ./common/scripts/autotest/fio-mixed.job | tee result.log"
+        - 'lava-test-case fio-mixed --result pass'
+        - 'lava-test-run-attach result.log'
