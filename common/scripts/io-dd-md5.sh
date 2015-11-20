@@ -10,7 +10,8 @@ TEST="io dd consistent testing"
 dd if=/dev/urandom of=testR2 bs=4096 count=256k
 md5sum testR2
 for x in {1..10}; do cp testR2 testR2.$x; md5sum testR2.$x; done | tee result.log
-	index=$(cut -d ' ' -f 1 < result.log | uniq | wc -l)
+rm -rf testR2*
+index=$(cut -d ' ' -f 1 < result.log | uniq | wc -l)
 if [ "$index" = "1" ]; then
     pass_test
 else
