@@ -22,7 +22,8 @@ install:
 run:
     steps:
         - "cd ~/"
-        - "make dir tmp-bonnie"
-        - "bonnie++ -d ~/tmp-bonnie -n 2048 | tee result.log"
+        - "rm -rf ~/tmp-bonnie"
+        - "make dir ~/tmp-bonnie"
+        - "bonnie++ -u root -d ~/tmp-bonnie -n 2048 | tee result.log"
         - 'lava-test-case bonnie++ --result pass'
         - 'lava-test-run-attach result.log'
