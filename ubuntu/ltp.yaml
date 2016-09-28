@@ -19,8 +19,8 @@ metadata:
 
 install:
     steps:
-        - 'VERSION=20150119'
-        - 'wget http://sourceforge.net/projects/ltp/files/LTP%20Source/ltp-$VERSION/ltp-full-$VERSION.tar.xz'
+        - 'VERSION=20160510'
+        - 'wget  http://192.168.3.100:8083/ltp-full-$VERSION.tar.xz'
         - 'tar --strip-components=1 -Jxf ltp-full-$VERSION.tar.xz'
         - 'mkdir build'
         - './configure --prefix=$(readlink -f build)'
