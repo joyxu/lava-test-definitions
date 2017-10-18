@@ -56,3 +56,6 @@ acl_test01 export TCbin=$LTPROOT/testcases/bin;acl_test01
 
 oom01 oom01
 #ext4-fs error always reported
+
+madvise06 madvise06
+#madvise06 always reported
