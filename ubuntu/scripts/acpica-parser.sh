@@ -22,5 +22,5 @@
 
 for f in `find $1 -name "__STATUS_OF_TESTS"`;
 do
-    sed "s/^\"://; s/FAIL/UNKOWN//" $f
+    sed "s/^\"://; s/FAIL/UNKOWN/" $f
 done
