@@ -31,38 +31,38 @@ for line in sys.stdin:
                                 rr_type = "UDP_RR"
                                 break
                         if parser is parser_replay:
-                                print "test_case_id:tcpreplay rated throughput1" + " units:bps " + "measurement:" + result.group('throughput1') + " result:skip"
-                                print "test_case_id:tcpreplay rated throughput2" + " units:Mbps " + "measurement:" + result.group('throughput2') + " result:skip"
-                                print "test_case_id:tcpreplay rated throughput3" + " units:pps " + "measurement:" + result.group('throughput3') + " result:skip"
+                                print "test_case_id:tcpreplay rated throughput1" + " units:bps " + "measurement:" + result.group('throughput1') + " result:pass"
+                                print "test_case_id:tcpreplay rated throughput2" + " units:Mbps " + "measurement:" + result.group('throughput2') + " result:pass"
+                                print "test_case_id:tcpreplay rated throughput3" + " units:pps " + "measurement:" + result.group('throughput3') + " result:pass"
                                 found_result = "true"
                                 break
                         if parser is parser_rtt:
-                                print "test_case_id:PING_RTT min" + " units:ms " + "measurement:" + result.group('min') + " result:skip"
-                                print "test_case_id:PING_RTT avg" + " units:ms " + "measurement:" + result.group('avg') + " result:skip"
-                                print "test_case_id:PING_RTT max" + " units:ms " + "measurement:" + result.group('max') + " result:skip"
-                                print "test_case_id:PING_RTT mdev" + " units:ms " + "measurement:" + result.group('mdev') + " result:skip"
+                                print "test_case_id:PING_RTT min" + " units:ms " + "measurement:" + result.group('min') + " result:pass"
+                                print "test_case_id:PING_RTT avg" + " units:ms " + "measurement:" + result.group('avg') + " result:pass"
+                                print "test_case_id:PING_RTT max" + " units:ms " + "measurement:" + result.group('max') + " result:pass"
+                                print "test_case_id:PING_RTT mdev" + " units:ms " + "measurement:" + result.group('mdev') + " result:pass"
                                 found_result = "true"
                                 break
                         if parser is parser_tcp:
-                                print "test_case_id:TCP_STREAM throughput" + "(Msg: " + result.group('Msg') + ")" + " units:10^bits/sec " + "measurement:" + result.group('throughput') + " result:skip"
-                                print "test_case_id:TCP_STREAM snd cpu utilization" + "(Msg: " + result.group('Msg') + ")" + " units:% " + "measurement:" + result.group('cpu_s') + " result:skip"
-                                print "test_case_id:TCP_STREAM rcv cpu utilization" + "(Msg: " + result.group('Msg') + ")" + " units:% " + "measurement:" + result.group('cpu_r') + " result:skip"
+                                print "test_case_id:TCP_STREAM throughput" + "(Msg: " + result.group('Msg') + ")" + " units:10^bits/sec " + "measurement:" + result.group('throughput') + " result:pass"
+                                print "test_case_id:TCP_STREAM snd cpu utilization" + "(Msg: " + result.group('Msg') + ")" + " units:% " + "measurement:" + result.group('cpu_s') + " result:pass"
+                                print "test_case_id:TCP_STREAM rcv cpu utilization" + "(Msg: " + result.group('Msg') + ")" + " units:% " + "measurement:" + result.group('cpu_r') + " result:pass"
                                 found_result = "true"
                                 break
                         if parser is parser_udp_l:
-                                print "test_case_id:UDP_STREAM snd throughput" + "(Msg: " + result.group('Msg') + ")" + " units:10^bits/sec " + "measurement:" + result.group('throughput') + " result:skip"
-                                print "test_case_id:UDP_STREAM snd cpu utilization" + "(Msg: " + result.group('Msg') + ")" + " units:% " + "measurement:" + result.group('cpu_s') + " result:skip"
+                                print "test_case_id:UDP_STREAM snd throughput" + "(Msg: " + result.group('Msg') + ")" + " units:10^bits/sec " + "measurement:" + result.group('throughput') + " result:pass"
+                                print "test_case_id:UDP_STREAM snd cpu utilization" + "(Msg: " + result.group('Msg') + ")" + " units:% " + "measurement:" + result.group('cpu_s') + " result:pass"
                                 found_result = "true"
                                 break
                         if parser is parser_udp_r:
-                                print "test_case_id:UDP_STREAM rcv throughput" + " units:10^bits/sec " + "measurement:" + result.group('throughput') + " result:skip"
-                                print "test_case_id:UDP_STREAM rcv cpu utilization" + " units:% " + "measurement:" + result.group('cpu_r') + " result:skip"
+                                print "test_case_id:UDP_STREAM rcv throughput" + " units:10^bits/sec " + "measurement:" + result.group('throughput') + " result:pass"
+                                print "test_case_id:UDP_STREAM rcv cpu utilization" + " units:% " + "measurement:" + result.group('cpu_r') + " result:pass"
                                 found_result = "true"
                                 break
                         if parser is parser_rr:
-                                print "test_case_id:" + rr_type + " transaction rate" + "(Req: " + result.group('Req') + " Res: " + result.group('Res') + ")" + " units:trans/sec " + "measurement:" + result.group('trans') + " result:skip"
-                                print "test_case_id:" + rr_type + " snd cpu utilization" + "(Req: " + result.group('Req') + " Res: " + result.group('Res') + ")" + " units:% " + "measurement:" + result.group('cpu_s') + " result:skip"
-                                print "test_case_id:" + rr_type + " rcv cpu utilization" + "(Req: " + result.group('Req') + " Res: " + result.group('Res') + ")" + " units:% " + "measurement:" + result.group('cpu_r') + " result:skip"
+                                print "test_case_id:" + rr_type + " transaction rate" + "(Req: " + result.group('Req') + " Res: " + result.group('Res') + ")" + " units:trans/sec " + "measurement:" + result.group('trans') + " result:pass"
+                                print "test_case_id:" + rr_type + " snd cpu utilization" + "(Req: " + result.group('Req') + " Res: " + result.group('Res') + ")" + " units:% " + "measurement:" + result.group('cpu_s') + " result:pass"
+                                print "test_case_id:" + rr_type + " rcv cpu utilization" + "(Req: " + result.group('Req') + " Res: " + result.group('Res') + ")" + " units:% " + "measurement:" + result.group('cpu_r') + " result:pass"
                                 found_result = "true"
                                 break
                 else:
