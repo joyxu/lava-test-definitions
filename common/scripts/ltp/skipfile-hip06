@@ -63,6 +63,9 @@ madvise06 madvise06
 #refer to http://lists.linux.it/pipermail/ltp/2016-March/001202.html
 su01 su01
 netns_netlink netns_netlink
+netns_breakns netns_breakns
+netns_comm netns_comm
+netns_sysfs netns_sysfs
 aio01 aio01
 aio02 aio02
 quota_remount_test01 quota_remount_test01
