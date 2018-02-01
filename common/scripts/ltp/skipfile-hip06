@@ -63,9 +63,23 @@ madvise06 madvise06
 #refer to http://lists.linux.it/pipermail/ltp/2016-March/001202.html
 su01 su01
 netns_netlink netns_netlink
-netns_breakns netns_breakns
-netns_comm netns_comm
-netns_sysfs netns_sysfs
+netns_breakns_ns_exec_ipv4_netlink netns_breakns.sh ns_exec ipv4 netlink
+netns_breakns_ns_exec_ipv6_netlink netns_breakns.sh ns_exec ipv6 netlink
+netns_breakns_ns_exec_ipv4_ioctl netns_breakns.sh ns_exec ipv4 ioctl
+netns_breakns_ns_exec_ipv6_ioctl netns_breakns.sh ns_exec ipv6 ioctl
+netns_breakns_ip_ipv4_netlink netns_breakns.sh ip ipv4 netlink
+netns_breakns_ip_ipv6_netlink netns_breakns.sh ip ipv6 netlink
+netns_breakns_ip_ipv4_ioctl netns_breakns.sh ip ipv4 ioctl
+netns_breakns_ip_ipv6_ioctl netns_breakns.sh ip ipv6 ioctl
+netns_comm_ns_exec_ipv4_netlink netns_comm.sh ns_exec ipv4 netlink
+netns_comm_ns_exec_ipv6_netlink netns_comm.sh ns_exec ipv6 netlink
+netns_comm_ns_exec_ipv4_ioctl netns_comm.sh ns_exec ipv4 ioctl
+netns_comm_ns_exec_ipv6_ioctl netns_comm.sh ns_exec ipv6 ioctl
+netns_comm_ip_ipv4_netlink netns_comm.sh ip ipv4 netlink
+netns_comm_ip_ipv6_netlink netns_comm.sh ip ipv6 netlink
+netns_comm_ip_ipv4_ioctl netns_comm.sh ip ipv4 ioctl
+netns_comm_ip_ipv6_ioctl netns_comm.sh ip ipv6 ioctl
+netns_sysfs netns_sysfs.sh
 aio01 aio01
 aio02 aio02
 quota_remount_test01 quota_remount_test01
